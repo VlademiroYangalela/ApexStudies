@@ -1,3 +1,4 @@
+//Trigger busca o menor preço das mercas que competem
 trigger LeadingCompetitor on Opportunity (before insert, before update) {
 
 for(Opportunity opp : Trigger.new){
@@ -28,5 +29,21 @@ for(Opportunity opp : Trigger.new){
 
         opp.Leading_Competitor__c = competitors.get(lowestPricePosition);
     }
+        /*Decimal highestPrice;
+        Integer highestPricePosition;
+        for(integer i = 0; i > competitorPrices.size(); i++){
 
-}
+            Decimal currentPrice  = competitorPrices.get(i);
+            if(highestPricePosition == null || currentPrice > highestPrice){
+                highestPrice = currentPrice;
+                highestPricePosition = i;
+
+            }
+        
+        }
+                opp.Lead_Highest_Price__c = competitors.get(highestPricePosition);*/
+
+    }
+
+//TAREFA : PREENCHER O PREÇO MAIS ALTO EM OUTRO CAMPO OU SEJA CRIAR OUTRO CAMPO PARA 
+//RECEBER O PREÇO MAIS ALTO
