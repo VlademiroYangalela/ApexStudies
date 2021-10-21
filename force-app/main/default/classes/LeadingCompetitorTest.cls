@@ -14,11 +14,11 @@ public  class LeadingCompetitorTest {
         opp.Competitor_3_Price__c = 25000;
 
         //set competitor fields
-        opp.Competitor_1_Price__c = 'Amazon';
+        /*opp.Competitor_1_Price__c = 'Amazon';
         opp.Competitor_2_Price__c = 'Google';
         opp.Competitor_3_Price__c = 'Microsoft';
 
-        insert opp;
+        insert opp;*/
         system.debug('Opportunity ' + opp.Name + 'inserted with all competitor fields populated.');
 
 
